@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS内容</title>
+</head>
+<body>
+    <xmp>
+    Css添加方法
+1.	行内添加 style=”color:red”
+2.	内嵌样式 <head>内写<style type=”text/css”>…</style>
+3.	单独文件 head内写 <link rel=”stylesheet” href=” 路径”>   link:css tab
+优先级：行内>内嵌>链接
+Css选择器
+1.	标签选择器 body{ } h1{ } p{ }
+2.	类别选择器 .one{ } .two{ } 引用：<p class=”one”>…</p> 优先级类别>标签
+3.	ID选择器 #one 唯一被引用一次
+4.	嵌套声明 p span{ }
+5.	集体声明h1,p{ }
+6.	全体声明 *{ }
+7.	混合<p class=”one two” id=” ”>…</p>
+Css样式 
+1.	px 像素 em字符 %百分比（继承父级）
+2.	颜色 red blue green rgb(x,x,x) 0-255 rgb(x%,x%,x%) rgba(x,x,x) alpha通道 #rggbb 重复位#rgb
+3.	文本 color letter-spacing间距 line-height 行高1.5em text-align 对齐center,right,justify（两端对齐） text-decoration 装饰线 overline上 line-through删除 underline下划线 none 无
+4.	字体 font定义所有属性：斜体 粗体 字号/行高 字体 font-family有空格加双引号 font-size 字号 font-style 斜体italic font-weight 粗体bold
+5.	背景属性 background定义：颜色 图片repeat background-color background-imge url(“logo.jpg”) bg-repeat repeat-x -y no-repeat
+示例 div{height:30px;width:600px;background:url(“logo.gif”) repeat-x }
+6.	超链接 a:link a:visited a:hover悬停 a:active点击的时候 Love&Hate按顺序依次设置
+a:link{…} a:visited{…} …
+7.	列表 list-style设置所有属性 l-s-image列表标志图像url(“image.gif”) l-s-position标志位置inside outside l-s-type标志的类型 无序：none,disc默认,cicle,square 有序：lowe-roman小写罗马数字,upper-r,lower-alpha小写字母,upper-a,lower-Greek,lower-latin,upper-latin
+8.	表格 table,td,th{ } width,height border border-cpllapse:cpllapse边框重叠 tr/td:nth-child(odd|even){background-color:red}奇偶选择器
+
+    </xmp>
+</body>
+</html>
