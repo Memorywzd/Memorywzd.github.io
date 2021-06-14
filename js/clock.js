@@ -5,21 +5,17 @@ window.onload = function() {
     var video = document.getElementById("video");
     var startHours = 0;
 
-
     setInterval(function() {
         clock();
     }, 1000);
 
-
     function clock() {
-
         var hours = new Date().getHours();
         if (hours < 10) {
             var hours1 = "0" + hours
         } else {
             var hours1 = hours
         };
-
 
         var minutes = new Date().getMinutes();
         if (minutes < 10) {
@@ -41,12 +37,10 @@ window.onload = function() {
                 var hours1 = 12;
             };
 
-
             if (hours1 < 10) {
                 var hours1 = "0" + hours1
             };
         };
-
 
         if ((hours >= 6 && hours < 19 && offCycle == 0) || offCycle == 1 || offCycle == 2) {
             var mc = "day";
@@ -70,13 +64,10 @@ window.onload = function() {
             video.src = "videos/night.webm";
         } else {};
 
-
-
         var minute0 = "clock/" + mc + "/minute0/" + ("" + minutes1)[1] + ".png";
         var minute1 = "clock/" + mc + "/minute1/" + ("" + minutes1)[0] + ".png";
         var hour0 = "clock/" + mc + "/hour0/" + ("" + hours1)[1] + ".png";
         var hour1 = "clock/" + mc + "/hour1/" + ("" + hours1)[0] + ".png";
-
 
         document.getElementById("minutes0").src = minute0;
         document.getElementById("minutes1").src = minute1;
@@ -84,7 +75,6 @@ window.onload = function() {
         document.getElementById("hours1").src = hour1;
 
         return startHours = hours;
-
     };
 
 
@@ -100,47 +90,34 @@ window.onload = function() {
         };
     }
 
-
-
-    window.wallpaperPropertyListener = {
-        applyUserProperties: function(properties) {
-            if (properties.show_clock) {
-                if (0) {
-                    document.getElementById("clock").style.display = "inline";
-                } else {
-                    document.getElementById("clock").style.display = "none";
-                };
+    function action() {
+        if (Hour12) {
+            if (Hour12.value) {
+                hour_12(true);
+            } else {
+                hour_12(false);
             };
-            if (properties.Hour12) {
-                if (properties.Hour12.value) {
-                    hour_12(false);
-                } else {
-                    hour_12(true);
-                };
+        };
+
+        if (dayCycle) {
+            if (dayCycle.value == 0) {
+                set();
+                offycle(0);
+            } else if (dayCycle.value == 1) {
+                video.src = "videos/sunrise.webm";
+                offycle(1);
+            } else if (dayCycle.value == 2) {
+                video.src = "videos/day.webm";
+                offycle(2);
+            } else if (dayCycle.value == 3) {
+                video.src = "videos/sunset.webm";
+                offycle(3);
+            } else {
+                video.src = "videos/night.webm";
+                offycle(4);
             };
-
-            if (properties.dayCycle) {
-                if (properties.dayCycle.value == 0) {
-                    set();
-                    offycle(0);
-                } else if (properties.dayCycle.value == 1) {
-                    video.src = "videos/sunrise.webm";
-                    offycle(1);
-                } else if (properties.dayCycle.value == 2) {
-                    video.src = "videos/day.webm";
-                    offycle(2);
-                } else if (properties.dayCycle.value == 3) {
-                    video.src = "videos/sunset.webm";
-                    offycle(3);
-                } else {
-                    video.src = "videos/night.webm";
-                    offycle(4);
-                };
-            };
-        }
-    };
-
-
+        };
+    }
 
     function offycle(OFF) {
         setTimeout(function() {
@@ -158,5 +135,4 @@ window.onload = function() {
 
     clock();
     set();
-
 };

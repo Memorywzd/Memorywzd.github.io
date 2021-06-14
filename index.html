@@ -15,25 +15,27 @@
 
 <body>
     <!-- 背景视频 -->
-    <div id="clock">
-        <img id="minutes0" src="" alt="">
-        <img id="minutes1" src="" alt="">
-        <img id="hours0" src="" alt="">
-        <img id="hours1" src="" alt="">
+    <div id="main_back">
+        <div id="clock">
+            <img id="minutes0" src="" alt="">
+            <img id="minutes1" src="" alt="">
+            <img id="hours0" src="" alt="">
+            <img id="hours1" src="" alt="">
+        </div>
+        <video id="video" autoplay muted loop id="Video">
+            <source src="" type="video/webm">
+        </video>
     </div>
-    <video id="video" autoplay muted loop id="Video">
-        <source src="" type="video/webm">
-    </video>
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="hori_box">
             <a href="#" class="logo"></a>
             <div class="menu">
                 <a href="#">首页</a>
-                <a href="#About">简介</a>
-                <a href="#section">兴趣爱好</a>
+                <a href="#">简介</a>
+                <a href="#">兴趣爱好</a>
                 <a href="http://memorywzd.tk" target="_blank">OpenWrt后台</a>
-                <a href="mailto:memorywzd@bjfu.edu.cn" title="邮箱 memorywzd@bjfu.edu.cn">联系方式</a>
+                <a href="mailto:memorywzd@bjfu.edu.cn" title="邮箱 memorywzd@bjfu.edu.cn">联系我！</a>
             </div>
         </div>
     </nav>
@@ -57,11 +59,10 @@
             </div>
         </div>
     </section>
-
     <!-- 页脚 记得改名字-->
-    <!-- <section id="footer">
+    <section id="footer">
         <p>&copy;2021 Memorywzd &nbsp;&nbsp;版权所有&nbsp;&nbsp;</p>
-    </section> -->
+    </section>
 </body>
 
 </html>

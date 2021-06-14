@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 /* CSS Document */
 
 * {
@@ -9,12 +8,14 @@
     font-family: "Ubuntu", sans-serif;
     box-sizing: border-box;
 }
-
+body{
+    background-image: url(../images/backgroud.jpg);
+    background-repeat: repeat;
+}
 a {
     text-decoration: none;
     color: #889aa4;
 }
-
 .hori_box {
     max-width: 1300px;
     margin: auto;
@@ -23,14 +24,11 @@ a {
     align-items: center;
     justify-content: space-between;
 }
-
 .section {
     padding: 50px 0;
 }
 
-
 /*导航条*/
-
 .navbar {
     position: fixed;
     width: 100%;
@@ -40,7 +38,6 @@ a {
     z-index: 100;
     transition: .3s linear;
 }
-
 .logo {
     width: 44px;
     height: 44px;
@@ -49,13 +46,11 @@ a {
     border-radius: 22px;
     transition: all 0.7s ease;
 }
-
 .navbar .hori_box a:hover {
     border-radius: 5px;
     width: 55px;
     height: 55px;
 }
-
 .menu a {
     color: #fff;
     font-size: 15px;
@@ -63,20 +58,16 @@ a {
     margin-left: 30px;
     transition: .2s linear;
 }
-
 .menu a:hover {
     color: #48dbfb !important;
 }
 
-
 /*主界面*/
-
 #main_box {
     height: 100vh;
     min-height: 500px;
     background-attachment: fixed;
 }
-
 #main_box .hori_box {
     display: flex;
     align-items: center;
@@ -84,22 +75,18 @@ a {
     height: 100%;
     text-align: center;
 }
-
 #main_box .content {
     width: 100%;
     color: #fff;
 }
-
 #main_box .content .roll {
     font-size: 60px;
     margin-bottom: 60px;
 }
-
 #main_box .content .roll::after {
     content: "A BFUer";
     animation: textanim 10s linear infinite;
 }
-
 @keyframes textanim {
     25% {
         content: "A PC DIYer";
@@ -111,11 +98,9 @@ a {
         content: "A Friend";
     }
 }
-
 #main_box .buttons {
     margin-top: 60px;
 }
-
 #main_box .buttons a {
     display: inline-block;
     margin: 15px 30px;
@@ -128,16 +113,19 @@ a {
     border-radius: 6px;
     transition: .2s linear;
 }
-
 #main_box .buttons a:hover,
 #main_box .buttons a:nth-child(2) {
     background-color: #48dbfb;
     color: #fff;
 }
+#main_back{
+    overflow: hidden;
+    background-color: black;
+    pointer-events: none;
+}
 #clock img{
     box-sizing: content-box;
 }
-
 #minutes0 {
     padding-left: 79.89583%;
     padding-top: 4.373%;
@@ -145,7 +133,6 @@ a {
     top: 60px;
     width: 3.90625%;
 }
-
 #minutes1 {
     padding-left: 76.3541666%;
     padding-top: 4.16666667%;
@@ -153,7 +140,6 @@ a {
     top: 60px;
     width: 4.21875%;
 }
-
 #hours0 {
     padding-left: 71.3020833%;
     padding-top: 3.697916667%;
@@ -161,7 +147,6 @@ a {
     top: 60px;
     width: 4.2708333%;
 }
-
 #hours1 {
     padding-left: 67.2916667%;
     padding-top: 3.697916667%;
@@ -169,7 +154,6 @@ a {
     top: 60px;
     width: 4.53125%;
 }
-
 #video {
     top: 60px;
     left: 0;
@@ -181,21 +165,17 @@ a {
     position: fixed;
     width: 100%;
 }
-
 .social_acct a {
     color: #fff;
     font-size: 22px;
     margin: 0 10px;
     transition: .2s linear;
 }
-
 .social_acct a:hover {
     color: #48dbfb;
 }
 
-
 /*页脚*/
-
 #footer {
     height: 1vh;
     min-height: 1px;
