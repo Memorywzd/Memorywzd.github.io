@@ -9,8 +9,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url(../images/backgroud.jpg);
-    background-repeat: repeat;
+    background-color: #B2D5EB;
 }
 a {
     text-decoration: none;
