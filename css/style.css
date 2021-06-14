@@ -1,150 +1,209 @@
 @charset "utf-8";
+
 /* CSS Document */
 
-*{
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  font-family: "Ubuntu",sans-serif;
-  box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Ubuntu", sans-serif;
+    box-sizing: border-box;
 }
 
-a{
-  text-decoration: none;
-  color: #889aa4;
+a {
+    text-decoration: none;
+    color: #889aa4;
 }
-.hori_box{
-  max-width: 1300px;
-  margin: auto;
-  padding: 0 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+
+.hori_box {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.section{
-  padding: 50px 0;
+
+.section {
+    padding: 50px 0;
 }
+
 
 /*导航条*/
-.navbar{
-  position: fixed;
-  width: 100%;
-  padding: 10px 0;
-  top: 0;
-  background-color: #353b48;
-  z-index: 100;
-  transition: .3s linear; 
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 10px 0;
+    top: 0;
+    background-color: #353b48;
+    z-index: 100;
+    transition: .3s linear;
 }
-.logo{
-  width: 44px;
-  height: 44px;
-  background-image: url("../images/icon.png");
-  background-size: contain;
-  border-radius: 22px;
-  transition: all 0.7s ease;
+
+.logo {
+    width: 44px;
+    height: 44px;
+    background-image: url("../images/icon.png");
+    background-size: contain;
+    border-radius: 22px;
+    transition: all 0.7s ease;
 }
-.navbar .hori_box a:hover{
-  border-radius: 5px;
-  width: 55px;
-  height: 55px;
+
+.navbar .hori_box a:hover {
+    border-radius: 5px;
+    width: 55px;
+    height: 55px;
 }
-.menu a{
-  color: #fff;
-  font-size: 15px;
-  font-weight: 500;
-  margin-left: 30px;
-  transition: .2s linear;
+
+.menu a {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 30px;
+    transition: .2s linear;
 }
-.menu a:hover{
-  color: #48dbfb !important;
+
+.menu a:hover {
+    color: #48dbfb !important;
 }
+
 
 /*主界面*/
-#main_box{
-  height: 100vh;
-  min-height: 500px;
-  background-size: cover;
-  background-attachment: fixed;
-}
-#main_box .hori_box{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  text-align: center;
-}
-#main_box .content{
-  width: 100%;
-  color: #fff;
-}
-#main_box .content .roll{
-  font-size: 60px;
-  margin-bottom: 60px;
-}
-#main_box .content .roll::after{
-  content: "A BFUer";
-  animation: textanim 10s linear infinite;
-}
-@keyframes textanim{
-  25%{
-    content: "A PC DIYer";
-  }
-  50%{
-    content: "A Designer";
-  }
-  75%{
-    content: "A Friend";
-  }
-}
-#main_box .buttons{
-  margin-top: 60px;
-}
-#main_box .buttons a{
-  display: inline-block;
-  margin: 15px 30px;
-  color: #48dbfb;
-  font-size: 15px;
-  font-weight: 500;
-  width: 180px;
-  border: 1px solid #48dbfb;
-  padding: 14px 0;
-  border-radius: 6px;
-  transition: .2s linear;
-}
-#main_box .buttons a:hover,
-#main_box .buttons a:nth-child(2){
-  background-color: #48dbfb;
-  color: #fff;
-}
-video {
-  top: auto;
-  left: 0;
-  right: 0px;
-  bottom: 0px;
-  min-width: 100%;
-  min-height: 200px;
-  z-index: -1;
-  position: fixed;
-}
-.social_acct a{
-  color: #fff;
-  font-size: 22px;
-  margin: 0 10px;
-  transition: .2s linear;
-}
-.social_acct a:hover{
-  color: #48dbfb;
+
+#main_box {
+    height: 100vh;
+    min-height: 500px;
+    background-attachment: fixed;
 }
 
+#main_box .hori_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+#main_box .content {
+    width: 100%;
+    color: #fff;
+}
+
+#main_box .content .roll {
+    font-size: 60px;
+    margin-bottom: 60px;
+}
+
+#main_box .content .roll::after {
+    content: "A BFUer";
+    animation: textanim 10s linear infinite;
+}
+
+@keyframes textanim {
+    25% {
+        content: "A PC DIYer";
+    }
+    50% {
+        content: "A Designer";
+    }
+    75% {
+        content: "A Friend";
+    }
+}
+
+#main_box .buttons {
+    margin-top: 60px;
+}
+
+#main_box .buttons a {
+    display: inline-block;
+    margin: 15px 30px;
+    color: #48dbfb;
+    font-size: 15px;
+    font-weight: 500;
+    width: 180px;
+    border: 1px solid #48dbfb;
+    padding: 14px 0;
+    border-radius: 6px;
+    transition: .2s linear;
+}
+
+#main_box .buttons a:hover,
+#main_box .buttons a:nth-child(2) {
+    background-color: #48dbfb;
+    color: #fff;
+}
+#clock img{
+    box-sizing: content-box;
+}
+
+#minutes0 {
+    padding-left: 79.89583%;
+    padding-top: 4.373%;
+    position: fixed;
+    top: 60px;
+    width: 3.90625%;
+}
+
+#minutes1 {
+    padding-left: 76.3541666%;
+    padding-top: 4.16666667%;
+    position: fixed;
+    top: 60px;
+    width: 4.21875%;
+}
+
+#hours0 {
+    padding-left: 71.3020833%;
+    padding-top: 3.697916667%;
+    position: fixed;
+    top: 60px;
+    width: 4.2708333%;
+}
+
+#hours1 {
+    padding-left: 67.2916667%;
+    padding-top: 3.697916667%;
+    position: fixed;
+    top: 60px;
+    width: 4.53125%;
+}
+
+#video {
+    top: 60px;
+    left: 0;
+    right: 0px;
+    bottom: 0px;
+    min-width: 100%;
+    min-height: 200px;
+    z-index: -1;
+    position: fixed;
+    width: 100%;
+}
+
+.social_acct a {
+    color: #fff;
+    font-size: 22px;
+    margin: 0 10px;
+    transition: .2s linear;
+}
+
+.social_acct a:hover {
+    color: #48dbfb;
+}
+
+
 /*页脚*/
-#footer{
-  height: 1vh;
-  min-height: 1px;
-  background-size: cover;
-  background-attachment: fixed;
-  background-color: #353b48;
-  color: #889aa4;
-  text-align: right;
-  padding: 30px 0;
+
+#footer {
+    height: 1vh;
+    min-height: 1px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #353b48;
+    color: #889aa4;
+    text-align: right;
+    padding: 30px 0;
 }
 
