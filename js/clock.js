@@ -126,11 +126,9 @@ window.onload = function ()
 
     document.getElementById("apl_stl").onclick = function()
     {
-        var Hour24=change_stl_form.Hour24_stl.value;
-        console.log(Hour24);
+        var Hour24_check=document.getElementById("Hour24_stl");
         var dayCycle=change_stl_form.clock_style.value;
-        console.log(dayCycle);
-        if (Hour24 == "on")
+        if (Hour24_check.checked)
             {
                 hour_12(false);
             }
