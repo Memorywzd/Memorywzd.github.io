@@ -1,68 +1,94 @@
-window.onload = function() {
-
-    var hour12 = true;
+window.onload = function () 
+{
+    var hour12 = false;
     var offCycle = 0;
     var video = document.getElementById("video");
     var startHours = 0;
 
-    setInterval(function() {
-        clock();
-    }, 1000);
+    setInterval(function () {clock();}, 1000);
 
-    function clock() {
+    function clock()
+    {
         var hours = new Date().getHours();
-        if (hours < 10) {
+        if (hours < 10)
+        {
             var hours1 = "0" + hours
-        } else {
+        } 
+        else
+        {
             var hours1 = hours
         };
 
         var minutes = new Date().getMinutes();
-        if (minutes < 10) {
+        if (minutes < 10)
+        {
             var minutes1 = "0" + minutes
-        } else {
+        }
+        else
+        {
             var minutes1 = minutes
         };
 
         var seconds = new Date().getSeconds();
 
-        if (hour12 == true) {
-            if (hours > 12) {
+        if (hour12 == true)
+        {
+            if (hours > 12)
+            {
                 var hours1 = hours - 12
-            } else {
+            }
+            else
+            {
                 var hours1 = hours
             };
-
-            if (hours == 0) {
+            if (hours == 0)
+            {
                 var hours1 = 12;
             };
-
-            if (hours1 < 10) {
+            if (hours1 < 10)
+            {
                 var hours1 = "0" + hours1
             };
         };
 
-        if ((hours >= 6 && hours < 19 && offCycle == 0) || offCycle == 1 || offCycle == 2) {
+        if ((hours >= 6 && hours < 19 && offCycle == 0) || offCycle == 1 || offCycle == 2)
+        {
             var mc = "day";
-        } else {
+        }
+        else
+        {
             var mc = "night";
         };
 
-        if (seconds == 0 && minutes == 0) {
+        if (seconds == 0 && minutes == 0)
+        {
             var wallRefresh = true
-        } else {
+        }
+        else
+        {
             var wallRefresh = false
         };
 
-        if (hours == 6 && wallRefresh == true && offCycle == 0) {
-            video.src = "videosl/sunrise.webm";
-        } else if (hours == 12 && wallRefresh == true && offCycle == 0) {
+        if (hours == 6 && wallRefresh == true && offCycle == 0)
+        {
+            video.src = "videos/sunrise.webm";
+        }
+        else if (hours == 12 && wallRefresh == true && offCycle == 0)
+        {
             video.src = "videos/day.webm";
-        } else if (hours == 19 && wallRefresh == true && offCycle == 0) {
+        }
+        else if (hours == 19 && wallRefresh == true && offCycle == 0)
+        {
             video.src = "videos/sunset.webm";
-        } else if (hours == 21 && wallRefresh == true && offCycle == 0) {
+        }
+        else if (hours == 21 && wallRefresh == true && offCycle == 0)
+        {
             video.src = "videos/night.webm";
-        } else {};
+        }
+        else
+        {
+
+        };
 
         var minute0 = "clock/" + mc + "/minute0/" + ("" + minutes1)[1] + ".png";
         var minute1 = "clock/" + mc + "/minute1/" + ("" + minutes1)[0] + ".png";
@@ -78,60 +104,88 @@ window.onload = function() {
     };
 
 
-    function set() {
-        if (startHours >= 6 && startHours < 12) {
+    function set()
+    {
+        if (startHours >= 6 && startHours < 12)
+        {
             video.src = "videos/sunrise.webm";
-        } else if (startHours >= 12 && startHours < 19) {
+        }
+        else if (startHours >= 12 && startHours < 19)
+        {
             video.src = "videos/day.webm";
-        } else if (startHours >= 19 && startHours < 21) {
+        }
+        else if (startHours >= 19 && startHours < 21)
+        {
             video.src = "videos/sunset.webm";
-        } else {
+        }
+        else
+        {
             video.src = "videos/night.webm";
         };
     }
 
-    function action() {
-        if (Hour12) {
-            if (Hour12.value) {
-                hour_12(true);
-            } else {
+    document.getElementById("apl_stl").onclick = function()
+    {
+        var Hour24=change_stl_form.Hour24_stl.value;
+        console.log(Hour24);
+        var dayCycle=change_stl_form.clock_style.value;
+        console.log(dayCycle);
+        if (Hour24 == "on")
+            {
                 hour_12(false);
+            }
+            else
+            {
+                hour_12(true);
             };
-        };
 
-        if (dayCycle) {
-            if (dayCycle.value == 0) {
+        if (dayCycle)
+        {
+            if (dayCycle == 0)
+            {
                 set();
                 offycle(0);
-            } else if (dayCycle.value == 1) {
+            }
+            else if (dayCycle == 1)
+            {
                 video.src = "videos/sunrise.webm";
                 offycle(1);
-            } else if (dayCycle.value == 2) {
+            }
+            else if (dayCycle == 2)
+            {
                 video.src = "videos/day.webm";
                 offycle(2);
-            } else if (dayCycle.value == 3) {
+            }
+            else if (dayCycle == 3)
+            {
                 video.src = "videos/sunset.webm";
                 offycle(3);
-            } else {
+            }
+            else
+            {
                 video.src = "videos/night.webm";
                 offycle(4);
             };
         };
     }
 
-    function offycle(OFF) {
-        setTimeout(function() {
+    function offycle(OFF)
+    {
+        setTimeout(function ()
+        {
             clock();
         }, 1);
         return offCycle = OFF;
     };
 
-    function hour_12(bo) {
-        setTimeout(function() {
+    function hour_12(_boll)
+    {
+        setTimeout(function ()
+        {
             clock();
         }, 1);
-        return hour12 = bo;
-    };
+        return hour12 = _boll;
+    }
 
     clock();
     set();

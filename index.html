@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/font-awesome.css">
     <!--头像-->
     <link rel="shortcut icon" href="images/icon.png">
+    <!-- 红石闹钟 -->
     <script src="js/clock.js"></script>
 </head>
 
@@ -30,6 +31,32 @@
     <nav class="navbar">
         <div class="hori_box">
             <a href="#" class="logo"></a>
+            <div class="chg_stl">
+                <form name="change_stl_form">
+                    <div class="chg_stl_p">
+                        <p>更改时钟</p><p>样式</p>
+                    </div>
+                    <div class="chg_stl_chk">
+                        <div class="chk1">
+                            <p>
+                                背景循环
+                                <select name="clock_style" id="clock_stl">
+                                    <option value="0">循环</option>
+                                    <option value="1">日出</option>
+                                    <option value="2">白天</option>
+                                    <option value="3">日落</option>
+                                    <option value="4">夜晚</option>
+                                </select>
+                            </p>
+                        </div>
+                        <div class="chk2">
+                            <p>24小时制时钟<input type="checkbox" name="Hour24" id="Hour24_stl"></p>
+                        </div>
+                    </div>
+                    <input type="button" value="确定" id="apl_stl">
+                </form>
+            </div>
+            
             <div class="menu">
                 <a href="#">首页</a>
                 <a href="#">简介</a>

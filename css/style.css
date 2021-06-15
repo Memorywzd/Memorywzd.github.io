@@ -50,6 +50,24 @@ a {
     width: 55px;
     height: 55px;
 }
+.chg_stl{
+    color: #fff;
+/*     width: 300px;
+    height: 42px; */
+    align-items:center;
+    text-align: center;
+}
+.chg_stl_p{
+    float: left;
+    margin: 0 5px;
+}
+.chg_stl_chk{
+    float: left;
+    margin: 0 5px;
+}
+.chg_stl_chk+input{
+    margin: 10px 5px;
+}
 .menu a {
     color: #fff;
     font-size: 15px;
@@ -91,7 +109,7 @@ a {
         content: "A PC DIYer";
     }
     50% {
-        content: "A Designer";
+        content: "A MineCrafter";
     }
     75% {
         content: "A Friend";
