@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    background-image: url(../images/login_pic.png);
+    background-repeat: no-repeat;
+    font-size: 12px;
+    height: 100%
+}
+

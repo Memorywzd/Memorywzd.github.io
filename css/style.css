@@ -116,10 +116,10 @@ section {
         content: "A Friend";
     }
 }
-#main_box .buttons {
+.buttons {
     margin-top: 60px;
 }
-#main_box .buttons a {
+.buttons a {
     display: inline-block;
     margin: 15px 30px;
     color: #48dbfb;
@@ -131,8 +131,8 @@ section {
     border-radius: 6px;
     transition: .2s linear;
 }
-#main_box .buttons a:hover,
-#main_box .buttons a:nth-child(2) {
+.buttons a:hover,
+.buttons a:nth-child(2) {
     background-color: #48dbfb;
     color: #fff;
 }
