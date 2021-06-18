@@ -7,6 +7,8 @@
     <title>登录-Memorywzd</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/login.css">
+    <!-- 使用FontAwesome矢量图标 -->
+    <link rel="stylesheet" href="css/font-awesome.css">
     <!--头像-->
     <link rel="shortcut icon" href="images/icon.png">
 </head>
@@ -16,15 +18,35 @@
         <div class="hori_box">
             <a href="#" class="logo"></a>
             <div class="menu">
-                <a href="#">首页</a>
-                <a href="#about">简介</a>
-                <a href="#">兴趣爱好</a>
+                <a href="index.html">首页</a>
+                <a href="index.html#about">简介</a>
+                <!-- <a href="#">兴趣爱好</a> -->
                 <a href="http://memorywzd.tk" target="_blank">OpenWrt后台</a>
-                <a href="https://blog.csdn.net/weixin_43673589/article/details/109220448">校园网IPv6教程</a>
+                <a href="https://blog.csdn.net/weixin_43673589/article/details/109220448" target="_blank">校园网IPv6教程</a>
             </div>
         </div>
     </nav>
-    
+    <div class="box0">
+        <div class="border_box">
+            <div class="login_text">
+                <p>欢迎登陆/注册！</p>
+            </div>
+            <form class="form-login" method="post" action="#">
+                <div class="input-container">
+                    <div class="input-group fab fa-user fa-2x">
+                        <input type="text" value="Memorywzd">
+                    </div>
+                    <div class="input-group fab fa-unlock-alt fa-2x">
+                        <input type="password">
+                    </div>
+                </div>
+                <div>
+                    <input type="submit" value="注册" class="cbi-button cbi-button-apply">
+                    <input type="submit" value="登录" class="cbi-button cbi-button-apply">
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>

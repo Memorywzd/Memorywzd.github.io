@@ -2,9 +2,101 @@
 /* CSS Document */
 
 body {
-    background-image: url(../images/login_pic.png);
+    background-image: url(../images/login_pic.jpg);
     background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 60px;
     font-size: 12px;
     height: 100%
+}
+
+.box0 {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.border_box{
+    border: solid 2px #f4f5f7;
+    width: 30%;
+    box-shadow: rgb(0 0 0 / 75%) 0 0 35px -5px;
+    /* background-color: rgba(244, 245, 247, 0);
+    background: transparent; */
+    backdrop-filter: blur(1.5px);
+    background-color: rgba(244, 245, 247, 0.5);
+}
+
+.login_text{
+    width:80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.login_text p{
+    font-size: 17px;
+    text-align: center;
+    line-height: 26px;
+    margin-top: 20px;
+}
+.form-login {
+    width: 100%;
+    padding: 20px 50px;
+    box-sizing: border-box;
+}
+.input-group {
+    margin-bottom: 1.25rem;
+    position: relative;
+}
+.input-group input {
+    font-size: 1rem;
+    line-height: 1.5em;
+    display: block;
+    width: 100%;
+    padding: .5rem .75rem .5rem 3rem;
+    margin: .825rem 0;
+    box-sizing: border-box;
+    transition: all .3s cubic-bezier(.68, -0.55, .265, 1.55);
+    color: #525461;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+    background-clip: padding-box;
+    box-shadow: 0 3px 2px rgb(233 236 239 / 5%);
+    outline: none;
+}
+.cbi-button-apply {
+    width: 40% !important;
+    box-shadow: rgb(0 0 0 / 10%) 0 0 50px 0;
+    font-weight: 600;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    min-height: 50px;
+    background-color: #5e72e4 !important;
+    border-radius: 6px;
+    outline: none;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    padding: 10px 0px;
+    margin: 70px 10px 70px;
+    transition: all .3s !important;
+    letter-spacing: .8rem;
+}
+.input-group::before {
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    color: #525461;
+    position: absolute;
+    z-index: 100;
+    left: 10px;
+    top: 10px;
 }
 
